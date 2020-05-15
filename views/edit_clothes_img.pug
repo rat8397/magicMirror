@@ -1,0 +1,8 @@
+extends ./layouts/main.pug
+block content
+    .form_container
+        form(action=routes.edit_clothes_img(loggedUser._id,clothes_id), method="post",enctype = "multipart/form-data")
+            .file_form
+                label(for="file") Clothes File
+                input(type="file" id="file" name="clothesFile", required=true, accept = "image/*")
+                input(type="submit" value="Update Clothes img")    

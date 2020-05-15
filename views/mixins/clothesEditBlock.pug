@@ -1,0 +1,49 @@
+mixin clothesEditBlock(clothes = {})
+    .clothesBlock
+        case clothes.category
+            when 'outer'
+                .clothes_outer
+                    img.img(src=clothes.clothesFile height=100, weight=100)
+                    h4.img_color=clothes.color
+                    h4.img_category=clothes.category
+                    h4.img_category_detail=clothes.category_detail
+                    h4.img_season=clothes.season
+                    button.delete_button()    
+                        a(href = routes.clothes_delete(clothes.id)) X                  
+            when 'top'
+                .clothes_top
+                    img.img(src=clothes.clothesFile height=100, weight=100)
+                    h4.img_color=clothes.color
+                    h4.img_category=clothes.category
+                    h4.img_category_detail=clothes.category_detail
+                    h4.img_season=clothes.season
+                    button.delete_button()    
+                        a(href = routes.clothes_delete(clothes.id)) X   
+            when 'bottom'
+                .clothes_bottom
+                    img.img(src=clothes.clothesFile height=100, weight=100)
+                    h4.img_color=clothes.color
+                    h4.img_category=clothes.category
+                    h4.img_category_detail=clothes.category_detail
+                    h4.img_season=clothes.season
+                    button.delete_button()    
+                        a(href = routes.clothes_delete(clothes.id)) X   
+            when 'shoes'
+                .clothes_shoes
+                    img.img(src=clothes.clothesFile height=100, weight=100)
+                    h4.img_color=clothes.color
+                    h4.img_category=clothes.category
+                    h4.img_category_detail=clothes.category_detail
+                    h4.img_season=clothes.season
+                    button.delete_button()    
+                        a(href = routes.clothes_delete(clothes.id)) X   
+            default
+                .clothes_etc
+                    img.img(src=clothes.clothesFile height=100, weight=100)
+                    h4.img_color=clothes.color
+                    h4.img_category=clothes.category
+                    h4.img_category_detail=clothes.category
+                    h4.img_season=clothes.season
+                    button.delete_button()    
+                        a(href = routes.clothes_delete(clothes.id)) X   
+        

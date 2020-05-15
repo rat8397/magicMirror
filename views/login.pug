@@ -1,0 +1,8 @@
+extends layouts/main.pug
+block content
+    .form_container
+        form(action=routes.login, method="post")
+            input(type="email",name="email",placeholder="EMAIL",required="true")
+            input(type="password",name="password",placeholder="PASSWORD",required="true")
+            input(type="submit",value="Log In")
+        include ./partials/socialLogin.pug       

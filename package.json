@@ -1,0 +1,51 @@
+{
+  "name": "magic_mirror",
+  "version": "1.0.0",
+  "description": "my software project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    //"start": "nodemon --exec babel-node init.js",
+    "start": "babel-node init.js",
+    
+    "tunnel": "lt --port 4000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rat8397/magicMirror.git"
+  },
+  "author": "JangJunhyeok",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rat8397/magicMirror/issues"
+  },
+  "homepage": "https://github.com/rat8397/magicMirror#readme",
+  "dependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.0",
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "helmet": "^3.22.0",
+    "mongoose": "^5.9.9",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "passport-github": "^1.1.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.0.1",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.19.0",
+    "nodemon": "^2.0.2"
+  }
+}

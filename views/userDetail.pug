@@ -1,0 +1,13 @@
+extends layouts/main.pug
+block content
+    .user-profile
+        .user-profile-header
+            h4.profile_userName=`이름 : ${loggedUser.name}`
+            h4.profile_userEmail=`이메일 : ${loggedUser.email}`
+            h4.profile_userAddress=`주소 : ${loggedUser.address}`
+        button.edit
+            a(href=routes.edit_profile(loggedUser._id))
+                span 수정하기
+        button.edit
+            a(href=routes.change_password)
+                span 비밀번호 변경하기

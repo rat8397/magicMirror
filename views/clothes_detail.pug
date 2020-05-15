@@ -1,0 +1,15 @@
+extends ./layouts/main.pug
+block content
+    .img_detail
+        img.img(src=clothes[0].fileUrl height=100 weight=100)
+    .img_text
+        h4.img_detail_color 색상  : #{clothes[0].color}
+        h4.img_detail_category 대분류 : #{clothes[0].category}
+        h4.img_detail_category_detail 소분류 : #{clothes[0].category_detail}
+        h4.img_detail_season 계절  :#{clothes[0].season}
+    button.edit
+        a(href=routes.edit_clothes_info(loggedUser._id,clothes[0]._id))|정보변경하기
+    button.edit
+        a(href=routes.edit_clothes_img(loggedUser._id,clothes[0]._id))|사진변경하기
+    button.edit
+        a(href=routes.edit(loggedUser._id))|편집창으로

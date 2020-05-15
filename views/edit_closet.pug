@@ -1,0 +1,16 @@
+extends ./layouts/main.pug
+include mixins/clothesEditBlock
+block content
+    .target_clothes
+        each item in clothes
+            +clothesEditBlock({
+                id:item.id,
+                color:item.color,
+                season:item.season,
+                category:item.category,
+                category_detail:item.category_detail,
+                clothesFile:item.fileUrl
+            })
+    button.edit
+        a(href=routes.closet(loggedUser._id)) 옷장으로
+          

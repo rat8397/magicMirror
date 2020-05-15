@@ -1,0 +1,5 @@
+mixin clothesBlock(clothes = {})
+    .clothesBlock
+        a(href=routes.clothes_detail(loggedUser._id,clothes.id))
+            img.img(src=clothes.clothesFile height=100 weight=100)
+            h4.img_color=clothes.category_detail            

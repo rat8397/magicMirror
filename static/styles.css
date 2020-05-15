@@ -1,0 +1,31 @@
+a:link {
+  color: red;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+.clothesBlock{
+  border:1px solid black;
+  display:flex;
+  
+}
+.clothesBlock .clothes_outer{
+}
+.clothesBlock .clothes_top{
+  
+}
+.clothesBlock .clothes_bottom{
+  
+}
+.clothesBlock .clothes_shoes{
+  
+}
+.color{
+  display:inline;
+}

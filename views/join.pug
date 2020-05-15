@@ -1,0 +1,11 @@
+extends layouts/main.pug
+block content
+    .form_container
+        form(action=routes.join,method="post")
+            input(type="text",name="name",placeholder="NAME",required="true")
+            input(type="email",name="email",placeholder="EMAIL",required="true")
+            input(type="text",name="birthday",placeholder="BIRTHDAY",required="true")
+            input(type="text",name="address",placeholder="ADDRESS",required="true")
+            input(type="password",name="password",placeholder="PASSWORD",required="true")
+            input(type="password",name="password2",placeholder="VERIFY YOUR PASSWORD",required="true")
+            input(type="submit",value="Join Now")            

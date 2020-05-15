@@ -1,0 +1,65 @@
+.form_container
+        form(action=routes.upload(loggedUser._id), method="post",enctype = "multipart/form-data")
+            .color
+                .color
+                    input.color(type="radio" id="red" name="color" value="빨강")
+                    label.color(for="red")|RED
+                .color                  
+                    input.color(type="radio" id="orange" name="color" value="주황")
+                    label.color(for="orange")|ORANGE
+                .color                 
+                    input.color(type="radio" id="yellow" name="color" value="노랑")
+                    label.color(for="yellow")|YELLOW
+                .color                
+                    input.color(type="radio" id="green" name="color" value="초록")
+                    label.color(for="green")|GREEN
+                .color             
+                    input.color(type="radio" id="blue" name="color" value="파랑")
+                    label.color(for="blue")|BLUE
+                .color                
+                    input.color(type="radio" id="darkblue" name="color" value="군청")
+                    label.color(for="darkblue")|DARKBLUE
+                .color               
+                    input.color(type="radio" id="purple" name="color" value="보라")
+                    label.color(for="purple")|PURPLE
+                .color               
+                    input.color(type="radio" id="white" name="color" value="하양")
+                    label.color(for="purple")|WHITE
+                .color               
+                    input.color(type="radio" id="black" name="color" value="검정")
+                    label.color(for="purple")|BLACK 
+            .season
+                input.season(type="radio" id="winter" name="season" value="겨울")
+                label.season(for="winter")|WINTER                
+                input.season(type="radio" id="summer" name="season" value="여름")
+                label.season(for="winter")|SUMMER                
+                input.season(type="radio" id="spring-fall" name="season" value="봄가을")
+                label.season(for="winter")|SPRING-FALL
+            .category
+                input.category(type="radio" id="outer" name="category" value="아우터")
+                label.category(for="outer")|OUTER
+                input.category(type="radio" id="bottom" name="category" value="하의")
+                label.category(for="bottom")|BOTTOM
+                input.category(type="radio" id="shoes" name="category" value="신발")
+                label.category(for="shoes")|SHOES
+                input.category(type="radio" id="top" name="category" value="상의")
+                label.category(for="top")|TOP
+            .category_detail
+                input.category_detail(type="radio" id="1/2t" name="category_detail" value="반팔")
+                label.category_detail(for="1/2top")|1/2T
+                input.category_detail(type="radio" id="t" name="category_detail" value="긴팔")
+                label.category_detail(for="t")|T
+                input.category_detail(type="radio" id="mtm" name="category_detail" value="맨투맨")
+                label.category_detail(for="mtm")|MTM            
+                input.category_detail(type="radio" id="karat" name="category_detail" value="피케티")
+                label.category_detail(for="karat")|KARA-T
+                input.category_detail(type="radio" id="knit" name="category_detail" value="니트")
+                label.category_detail(for="knit")|KNIT-SWEATER
+                input.category_detail(type="radio" id="hood" name="category_detail" value="후드티")
+                label.category_detail(for="hood")|HOOD
+                input.category_detail(type="radio" id="shirt" name="category_detail" value="셔츠")
+                label.category_detail(for="shirt")|SHIRT
+            .file_form
+                label(for="file") Clothes File
+                input(type="file" id="file" name="clothesFile", required=true, accept = "image/*")
+                input(type="submit" value="Upload Clothes")        
