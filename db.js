@@ -2,8 +2,8 @@ import mongoose from "mongoose"
 import dotenv from "dotenv"
 
 dotenv.config()
-
 mongoose.connect(
+   
     process.env.MONGO_URL,
     {
         useNewUrlParser:true,
@@ -18,6 +18,8 @@ const handleOpen = () =>{
 
 }
 const handleError = (error)=>{
+    console.log(process.env.MONGO_URL);
+    console.log(error);
     console.log("DB오류가 발생하였습니다.");
 }
 db.once("open",handleOpen);//only once exec
