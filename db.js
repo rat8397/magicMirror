@@ -4,12 +4,10 @@ import dotenv from "dotenv"
 dotenv.config()
 mongoose.connect(
    
-    process.env.MONGO_URL,
+    process.env.MONGO_URL || 'mongodb://localhost/maggic-mirror',
     {
         useNewUrlParser:true,
         useFindAndModify:false
-
-
     }
 );
 const db = mongoose.connection;
@@ -18,8 +16,6 @@ const handleOpen = () =>{
 
 }
 const handleError = (error)=>{
-    console.log(process.env.MONGO_URL);
-    console.log(error);
     console.log("DB오류가 발생하였습니다.");
 }
 db.once("open",handleOpen);//only once exec
