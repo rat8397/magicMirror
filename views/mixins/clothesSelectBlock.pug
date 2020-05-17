@@ -1,0 +1,7 @@
+mixin clothesSelectBlock(clothes = {})
+    .clothesSelectBlock
+        input.clothes_select(type="radio" id=`${clothes.id}_clothes` name="clothes" value=clothes.id)
+        label(for=`${clothes.id}_clothes`)
+            img.img(src=clothes.clothesFile height=100, weight=100)
+
+            

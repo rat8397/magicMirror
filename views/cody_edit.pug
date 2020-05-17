@@ -1,0 +1,13 @@
+extends ./layouts/main.pug
+block content
+    .form_container
+        form(action=routes.cody_edit(id), method="post",enctype = "multipart/form-data")
+            input(type="radio" id="outer_category_detail_plus" name="outer" value="none")
+            label(for=outer_category_detail_plus)|아우터가사실없다(선택안해도댐)
+            input(type="radio" id="cody_season" name="season" value="여름")
+            label(for=cody_season_summer)|여름
+            input(type="radio" id="cody_season_winter" name="season" value="겨울")
+            label(for=cody_season_winter)|겨울        
+            input(type="radio" id="cody_season_spring" name="season" value="봄,가을")
+            label(for=cody_season_spring)|봄,가을
+            input(type="submit")

@@ -24,9 +24,13 @@ block content
                             |CODY                           
             else
                 li
+                    a(href=routes.cody_recommend(loggedUser.id))  
+                        span
+                        |RECOMMEND 
+                li
                     a(href=routes.logout)  
                         span
-                        |LOGOUT1 
+                        |LOGOUT
                 li
                     a(href=routes.me)  
                         span

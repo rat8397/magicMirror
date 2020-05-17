@@ -1,0 +1,17 @@
+extends ./layouts/main.pug
+include mixins/clothesSelectBlock
+block content
+    h4 옷을 선택하세요
+    .form_container
+        form(action=routes.cody_recommend(loggedUser.id), method="post" enctype = "multipart/form-data")
+            .showing_clothes
+                each item in clothes
+                    +clothesSelectBlock({
+                    id:item.id,
+                    color:item.color,
+                    category:item.category,
+                    category_detail:item.category_detail,
+                    season:item.season,
+                    clothesFile:item.fileUrl
+                    })
+            input(type="submit" value="선택하기")        

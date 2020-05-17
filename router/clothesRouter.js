@@ -5,7 +5,6 @@ import { getUpload, postUpload,  clothes_delete, clothes_detail,edit_closet, get
 import { uploadClothes, onlyPrivate } from "../middleware/middlewares";
 
 const clothesRouter = express.Router();
-    //"start": "nodemon --exec babel-node init.js",
 
 clothesRouter.get(routes.upload(),onlyPrivate,getUpload);
 clothesRouter.post(routes.upload(),onlyPrivate,uploadClothes,postUpload);

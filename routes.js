@@ -122,10 +122,25 @@ const routes = {
     },
     cody_detail:id=>{
         if(id){
-            return `/${id}`
+            return `/${id}/cody_detail`
         }else{
-            return `/:id`
+            return `/:id/cody_detail`
         }
+    },
+    cody_edit:id=>{
+        if(id){
+            return `/${id}/cody_edit`
+        }else{
+            return `/:id/cody_edit`
+        }
+    },
+    cody_recommend:id=>{
+        if(id){
+            return `/${id}/cody_recommend`
+        }else{
+            return `/:id/cody_recommend`
+        }
+
     },
     change_password:CHANGE_PASSWORD,
     me : ME,

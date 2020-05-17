@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node init.js",
+    "start": "nodemon --exec babel-node init.js",
+
     
     "tunnel": "lt --port 4000"
   },

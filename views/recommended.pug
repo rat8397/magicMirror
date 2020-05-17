@@ -1,0 +1,15 @@
+extends ./layouts/main.pug
+include mixins/codiesBlock
+block content
+    .showing_codies
+        each item in codiesFilter
+            +codiesBlock({
+                id:item._id,
+                name:item.cody_name,
+                color:item.color,
+                category:item.category,
+                category_detail:item.category_detail,
+                season:item.season,
+                clothesFile:item.fileUrl,
+                like:item.like
+            })

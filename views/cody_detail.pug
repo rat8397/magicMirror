@@ -2,4 +2,11 @@ extends ./layouts/main.pug
 block content
     .cody_showing
         img.img(src=cody.fileUrl,height=400,weight=400)
-        
+        h4 계절 #{cody.season}
+        h4 아우터 #{cody.outer_color}  #{cody.outer_category_detail}
+        h4 상의 #{cody.top_color}  #{cody.top_category_detail}
+        h4 하의 #{cody.bottom_color} #{cody.bottom_category_detail}
+        h4 신발 #{cody.shoes_color}  #{cody.shoes_category_detail}
+    a(href=routes.cody_edit(cody.id))|정보수정하기
+    a(href=routes.show_cody)|코디창으로
+    
