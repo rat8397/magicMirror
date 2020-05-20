@@ -15,6 +15,7 @@ const handleOpen = () =>{
 
 }
 const handleError = (error)=>{
+    console.log(error);
     console.log("DB오류가 발생하였습니다.");
 }
 db.once("open",handleOpen);//only once exec
