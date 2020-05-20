@@ -5,6 +5,7 @@ dotenv.config()
 mongoose.connect(   
     process.env.MONGO_URL || 'mongodb://localhost/maggic-mirror',
     {
+        useMongoClient:true,
         useNewUrlParser:true,
         useFindAndModify:false
     }

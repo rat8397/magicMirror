@@ -1,12 +1,18 @@
 doctype html
 html
     head
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(name='description', content='')
+        meta(name='author', content='')
+        link(href='/css/bootstrap.css', rel='stylesheet')
+
         link(rel="stylesheet" href="/static/styles.css")
         link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css")
         title #{pageTitle} |#{siteName}
     body
+        include ../../node_modules/jade-bootstrap/_bootstrap.pug
+
         include ../partials/header.pug        
         main
             block content
         include ../partials/footer.pug
-

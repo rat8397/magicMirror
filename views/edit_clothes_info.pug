@@ -4,62 +4,128 @@ block content
         form(action=routes.edit_clothes_info(loggedUser._id,clothes_id), method="post",enctype = "multipart/form-data")
             .color
                 .color
-                    input.color(type="radio" id="red" name="color" value="빨강")
-                    label.color(for="red")|RED
+                    input.color(type="radio" id="gray" name="color" value="gray")
+                    label.color(for="gray")|GRAY                
+                .color
+                    input.color(type="radio" id="pink" name="color" value="pink")
+                    label.color(for="pink")|PINK
+                .color
+                    input.color(type="radio" id="beige" name="color" value="beige")
+                    label.color(for="beige")|BEIGE
                 .color                  
-                    input.color(type="radio" id="orange" name="color" value="주황")
+                    input.color(type="radio" id="orange" name="color" value="orange")
                     label.color(for="orange")|ORANGE
                 .color                 
-                    input.color(type="radio" id="yellow" name="color" value="노랑")
+                    input.color(type="radio" id="yellow" name="color" value="yellow")
                     label.color(for="yellow")|YELLOW
                 .color                
-                    input.color(type="radio" id="green" name="color" value="초록")
+                    input.color(type="radio" id="green" name="color" value="green")
                     label.color(for="green")|GREEN
                 .color             
-                    input.color(type="radio" id="blue" name="color" value="파랑")
+                    input.color(type="radio" id="blue" name="color" value="blue")
                     label.color(for="blue")|BLUE
                 .color                
-                    input.color(type="radio" id="darkblue" name="color" value="군청")
+                    input.color(type="radio" id="darkblue" name="color" value="darkblue")
                     label.color(for="darkblue")|DARKBLUE
                 .color               
-                    input.color(type="radio" id="purple" name="color" value="보라")
+                    input.color(type="radio" id="purple" name="color" value="purple")
                     label.color(for="purple")|PURPLE
                 .color               
-                    input.color(type="radio" id="white" name="color" value="하양")
-                    label.color(for="purple")|WHITE
+                    input.color(type="radio" id="white" name="color" value="white")
+                    label.color(for="white")|WHITE
                 .color               
-                    input.color(type="radio" id="black" name="color" value="검정")
-                    label.color(for="purple")|BLACK 
+                    input.color(type="radio" id="black" name="color" value="black")
+                    label.color(for="black")|BLACK  
             .season
-                input.season(type="radio" id="winter" name="season" value="겨울")
+                input.season(type="radio" id="winter" name="season" value="winter")
                 label.season(for="winter")|WINTER                
-                input.season(type="radio" id="summer" name="season" value="여름")
+                input.season(type="radio" id="summer" name="season" value="summer")
                 label.season(for="winter")|SUMMER                
-                input.season(type="radio" id="spring-fall" name="season" value="봄가을")
+                input.season(type="radio" id="spring-fall" name="season" value="spring-fall")
                 label.season(for="winter")|SPRING-FALL
             .category
-                input.category(type="radio" id="outer" name="category" value="아우터")
+                input.category(type="radio" id="outer" name="category" value="outer")
                 label.category(for="outer")|OUTER
-                input.category(type="radio" id="bottom" name="category" value="하의")
+                input.category(type="radio" id="bottom" name="category" value="bottom")
                 label.category(for="bottom")|BOTTOM
-                input.category(type="radio" id="shoes" name="category" value="신발")
+                input.category(type="radio" id="shoes" name="category" value="shoes")
                 label.category(for="shoes")|SHOES
-                input.category(type="radio" id="top" name="category" value="상의")
+                input.category(type="radio" id="top" name="category" value="top")
                 label.category(for="top")|TOP
             .category_detail
-                input.category_detail(type="radio" id="1/2t" name="category_detail" value="반팔")
-                label.category_detail(for="1/2top")|1/2T
-                input.category_detail(type="radio" id="t" name="category_detail" value="긴팔")
-                label.category_detail(for="t")|T
-                input.category_detail(type="radio" id="mtm" name="category_detail" value="맨투맨")
-                label.category_detail(for="mtm")|MTM            
-                input.category_detail(type="radio" id="karat" name="category_detail" value="피케티")
-                label.category_detail(for="karat")|KARA-T
-                input.category_detail(type="radio" id="knit" name="category_detail" value="니트")
-                label.category_detail(for="knit")|KNIT-SWEATER
-                input.category_detail(type="radio" id="hood" name="category_detail" value="후드티")
-                label.category_detail(for="hood")|HOOD
-                input.category_detail(type="radio" id="shirt" name="category_detail" value="셔츠")
-                label.category_detail(for="shirt")|SHIRT
+                h4 아우터카테고리                
+                input.category_detail(type="radio" id="hoodzip" name="category_detail" value="hoodzip")
+                label.category_detail(for="hoodzip")|hoodzip
+                input.category_detail(type="radio" id="MA-1" name="category_detail" value="ma-1/blouson")
+                label.category_detail(for="MA-1")|ma-1/blouson
+                input.category_detail(type="radio" id="rider" name="category_detail" value="riderjacket")
+                label.category_detail(for="rider")|rider jacket,leather jacket
+                input.category_detail(type="radio" id="trucker" name="category_detail" value="truckerjacket")
+                label.category_detail(for="trucker")|trucker jacket
+                input.category_detail(type="radio" id="blazer" name="category_detail" value="blazer")
+                label.category_detail(for="blazer")|blazer
+                input.category_detail(type="radio" id="cardigan" name="category_detail" value="cardigan")
+                label.category_detail(for="cardigan")|cardigan
+                input.category_detail(type="radio" id="anorak" name="category_detail" value="anorak")
+                label.category_detail(for="anorak")|anorak
+                input.category_detail(type="radio" id="coach" name="category_detail" value="coachjacket")
+                label.category_detail(for="coach")|coach jacket                
+                input.category_detail(type="radio" id="training" name="category_detail" value="trainingjacket")
+                label.category_detail(for="training")|training jacket      
+                input.category_detail(type="radio" id="stadium" name="category_detail" value="stadiumjacket")
+                label.category_detail(for="stadium")|stadium jacket
+                input.category_detail(type="radio" id="coat" name="category_detail" value="coat")
+                label.category_detail(for="coat")|coat
+                input.category_detail(type="radio" id="padding" name="category_detail" value="padding")
+                label.category_detail(for="padding")|padding
+                input.category_detail(type="radio" id="vest" name="category_detail" value="vest")
+                label.category_detail(for="vest")|vest
+                input.category_detail(type="radio" id="hunting" name="category_detail" value="hunting")
+                label.category_detail(for="hunting")|hunting
+                input.category_detail(type="radio" id="wind" name="category_detail" value="windjacket")
+                label.category_detail(for="wind")|wind jacket
+                input.category_detail(type="radio" id="etc_outer" name="category_detail" value="etc")
+                label.category_detail(for="etc_outer")|etc outer     
+                h4 상의카테고리
+                input.category_detail(type="radio" id="1/2t" name="category_detail" value="halft")
+                label.category_detail(for="1/2top")|halft
+                input.category_detail(type="radio" id="t" name="category_detail" value="t")
+                label.category_detail(for="t")|t
+                input.category_detail(type="radio" id="mtm" name="category_detail" value="mtm")
+                label.category_detail(for="mtm")|mtm           
+                input.category_detail(type="radio" id="karat" name="category_detail" value="pkt")
+                label.category_detail(for="karat")|pkt
+                input.category_detail(type="radio" id="knit" name="category_detail" value="knit")
+                label.category_detail(for="knit")|knit
+                input.category_detail(type="radio" id="hood" name="category_detail" value="hoodt")
+                label.category_detail(for="hood")|hoodt
+                input.category_detail(type="radio" id="shirt" name="category_detail" value="shirt")
+                label.category_detail(for="shirt")|shirt
+                h4 하의카테고리
+                input.category_detail(type="radio" id="denim" name="category_detail" value="denim")
+                label.category_detail(for="denim")|데님팬츠
+                input.category_detail(type="radio" id="cotton" name="category_detail" value="cotton")
+                label.category_detail(for="cotton")|코튼팬츠
+                input.category_detail(type="radio" id="slacks" name="category_detail" value="slacks")
+                label.category_detail(for="slacks")|슬랙스            
+                input.category_detail(type="radio" id="training" name="category_detail" value="training")
+                label.category_detail(for="training")|트레이닝팬츠
+                input.category_detail(type="radio" id="short" name="category_detail" value="short")
+                label.category_detail(for="short")|쇼트팬츠
+                input.category_detail(type="radio" id="leggings" name="category_detail" value="leggings")
+                label.category_detail(for="leggings")|레깅스
+                input.category_detail(type="radio" id="etc_bottom" name="category_detail" value="etc")
+                label.category_detail(for="etc_bottom")|기타
+                h4 신발카테고리
+                input.category_detail(type="radio" id="dressshoes" name="category_detail" value="dressshoes")
+                label.category_detail(for="dressshoes")|dressshoes
+                input.category_detail(type="radio" id="boots" name="category_detail" value="boots")
+                label.category_detail(for="boots")|boots
+                input.category_detail(type="radio" id="sneakers" name="category_detail" value="sneakers")
+                label.category_detail(for="sneakers")|sneakers    
+                input.category_detail(type="radio" id="sandle" name="category_detail" value="sandle")
+                label.category_detail(for="sandle")|sandle
+                input.category_detail(type="radio" id="etc_shoes" name="category_detail" value="etc")
+                label.category_detail(for="etc_shoes")|etc  
             .file_form                
                 input(type="submit" value="Update Clothes")

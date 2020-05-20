@@ -47,23 +47,34 @@ export const post_cody_recommend = async(req,res)=>{
     const {
         body:{clothes}
     }=req;
-    const vetement = await Clothes.findById({_id:clothes});
-    var codies = await Cody.find({});
-    if(vetement.category === '상의'){
-        var codiesFilter =codies.filter((item,index)=>{
-            return vetement.category_detail === codies[index].top_category_detail
-        })//cody데이터들 중 상의상세카테고리가 같은 경우만 배열에 남긴다.
-        res.render("recommended",{pageTitle:"result of recommend",codiesFilter})
+    try{
+        const vetement = await Clothes.findById({_id:clothes});
+        var codies = await Cody.find({});
+        if(vetement.category === 'top'){
+            var codiesFilter =codies.filter((item,index)=>{
+                return vetement.category_detail === codies[index].top_category_detail
+            })//cody데이터들 중 상의상세카테고리가 같은 경우만 배열에 남긴다.
+            var codiesRealFilter = codiesFilter.filter((item,index)=>{
+                console.log(codies[index].top_color)
 
-
-    }else if(vetement.category === '아우터'){
-
-    }else if(vetement.category === '하의'){
-
-    }else if(vetement.category === '신발'){
-
+                return vetement.color === codies[index].top_color;
+            })
+    
+            res.render("recommended",{pageTitle:"result of recommend",codiesFilter,codiesRealFilter})
+    
+    
+        }else if(vetement.category === 'outer'){
+    
+        }else if(vetement.category === 'bottom'){
+    
+        }else if(vetement.category === 'shoes'){
+    
+        }
+    }catch(error){
+        res.redirect(routes.home);
+        
     }
-
+    
 }
 export const get_upload_cody=(req,res)=>{
     res.render("upload_cody",{pageTitle:"upload your cody"})
@@ -79,16 +90,12 @@ export const post_upload_cody=async(req,res)=>{
         body:{
             season,
             outer_color,
-            outer_category,
             outer_category_detail,
             top_color,
-            top_category,
             top_category_detail,
             bottom_color,
-            bottom_category,
             bottom_category_detail,
             shoes_color,
-            shoes_category,
             shoes_category_detail,
         }
 
@@ -96,16 +103,12 @@ export const post_upload_cody=async(req,res)=>{
     console.log(
         season,
         outer_color,
-        outer_category,
         outer_category_detail,
         top_color,
-        top_category,
         top_category_detail,
         bottom_color,
-        bottom_category,
         bottom_category_detail,
         shoes_color,
-        shoes_category,
         shoes_category_detail
     );
     
@@ -115,16 +118,12 @@ export const post_upload_cody=async(req,res)=>{
             season,
             fileUrl:path,
             outer_color,
-            outer_category,
             outer_category_detail,
             top_color,
-            top_category,
             top_category_detail,
             bottom_color,
-            bottom_category,
             bottom_category_detail,
             shoes_color,
-            shoes_category,
             shoes_category_detail,
         })
         console.log(newCody.fileUrl);
@@ -148,21 +147,38 @@ export const post_cody_edit= async(req,res)=>{
         params:{id}
     }=req;
 
-    const{
-        body:{season,outer}
+    var{
+        body:{
+            
+            season,
+            outer_color,
+            outer_category_detail,
+            top_color,
+            top_category_detail,
+            bottom_color,
+            bottom_category_detail,
+            shoes_color,
+            shoes_category_detail,
+        }
+
     }=req;
     //id = ObjectId.fromString(id);
         try{
             const cody = await Cody.findById({_id:id})
-    
-            await cody.update({season})
-            if(outer==="none"){
-                console.log("아우터가 사실 없다를 고르셨습니다.");
-                await cody.update({
-                    outer_category_detail:undefined,
-                    outer_category:undefined,
-                    outer_color:undefined})
-            }
+            
+            
+
+
+            await cody.update({season,
+                outer_color,
+                outer_category_detail,
+                top_color,
+                top_category_detail,
+                bottom_color,
+                bottom_category_detail,
+                shoes_color,
+                shoes_category_detail,
+            })
             res.redirect(routes.cody_detail(id));
         }catch(error){
             res.redirect(routes.home);

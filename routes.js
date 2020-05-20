@@ -25,6 +25,7 @@ const routes = {
     login: LOGIN,
     logout : LOGOUT,
     users:USERS,
+    test:'/test',
     user_detail : id=>{
         if(id){
             return `/users/${id}`

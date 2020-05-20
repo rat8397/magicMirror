@@ -7,18 +7,10 @@ const CodySchema = new mongoose.Schema({
   outer_color: {
     type: String,
   },
-  
-  outer_category: {
-    type: String,
-  },
   outer_category_detail: {
     type: String,
   },
   top_color: {
-    type: String,
-  },
-  
-  top_category: {
     type: String,
   },
   top_category_detail: {
@@ -27,19 +19,12 @@ const CodySchema = new mongoose.Schema({
   bottom_color: {
     type: String,
   },
-  
-  bottom_category: {
-    type: String,
-  },
   bottom_category_detail: {
     type: String,
   },
   shoes_color: {
     type: String,
   },  
-  shoes_category: {
-    type: String,
-  },
   shoes_category_detail: {
     type: String,
   },

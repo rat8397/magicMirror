@@ -1,15 +1,20 @@
 extends ./layouts/main.pug
 include mixins/codiesBlock
 block content
+    h4 상의가 같은 카테고리인 코디들입니다.
     .showing_codies
         each item in codiesFilter
             +codiesBlock({
                 id:item._id,
-                name:item.cody_name,
-                color:item.color,
-                category:item.category,
-                category_detail:item.category_detail,
                 season:item.season,
-                clothesFile:item.fileUrl,
-                like:item.like
+                codiesFile:item.fileUrl,
             })
+    h4 상의가 같은 카테고리인 코디들 중 색깔도 같은 코디들입니다.
+    .showing_codies
+        each item in codiesRealFilter
+            +codiesBlock({
+                id:item._id,
+                season:item.season,
+                codiesFile:item.fileUrl,
+            })
+    

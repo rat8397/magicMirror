@@ -18,6 +18,7 @@ import routes from "./routes"
 import dotenv from "dotenv"
 import clothesRouter from "./router/clothesRouter.js"
 import codyRouter from "./router/codyRouter.js";
+import testRouter from "./router/testRouter.js";
 dotenv.config();
 const app = express(); //express nodejs의 프레임워크이다. -> 서버
 const CookieStore = MongoStore(session) 
@@ -51,7 +52,7 @@ app.use(routes.home,globalRouter);//전역
 app.use(routes.home,userRouter);//유저관련
 app.use(routes.home,clothesRouter);//유저관련
 app.use(routes.home,codyRouter);
-
+app.use(routes.home,testRouter);
 
 
 
