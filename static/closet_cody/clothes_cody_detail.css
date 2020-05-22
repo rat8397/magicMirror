@@ -1,0 +1,42 @@
+.img_form{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.img_form .span_img_text{
+    margin-left:10px;
+    display:flex;
+    flex-direction:column;
+}
+.span_img_text .span_text_object{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+}
+.span_text_object span{
+    font-size :13px;
+    color:black;
+    font-weight: bold;
+    
+    border : 1px solid rgba(0,0,0,0.24);
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12) 1px 2px rgba(0,0,0,0.24);
+    padding:8px;
+    margin-bottom: 15px;
+}
+.span_text_object .data{
+    color:black
+}
+
+.img_detail img:not(.img_edit){
+    height:500px;
+    width: 500px;
+}
+.img_detail_cody img{
+    height:300px;
+    width: 300px;
+}
+.img_detail .img_edit{
+    height:100px;
+    width:100px;
+}

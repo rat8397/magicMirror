@@ -2,7 +2,55 @@ header.header
     .header_wrapper
         .header_column
             a(href=routes.home)
-                span.span_logo #{siteName}
-                br
-                br
-        
+                span.span_logo 옷장 속 모든 옷을 활용해보세요
+        .header_column
+            a(href=routes.home)
+                .title
+                    span(id="page_title_1")
+                        |A L L  A B O U T                
+                    span(id="page_title_2")
+                        |Y O U R   C L O S E T      
+            ul
+                if !loggedUser
+                    li
+                        a(href=routes.login)
+                            span
+                                i.fas.fa-user-circle
+                                |LOG IN  
+                    li
+                        a(href=routes.join)    
+                            span
+                                i.fas.fa-sign-in-alt
+                                |JOIN       
+                    li
+                        a(href=routes.show_cody)    
+                            span
+                                i.fas.fa-tshirt
+                                |STYLE                           
+                else
+                    li
+                        a(href=routes.logout)  
+                            span
+                                i.fas.fa-sign-out-alt
+                                |LOGOUT
+                    li
+                        a(href=routes.cody_recommend(loggedUser.id))  
+                            span
+                                |RECOMMEND YOUR CODY
+                    li
+                        a(href=routes.me)  
+                            span
+                                |PROFILE
+                    li
+                        a(href=routes.closet(loggedUser._id))  
+                            span
+                                |CLOSET
+                    li
+                        a(href=routes.upload_cody(loggedUser._id))  
+                            span
+                                |CODY UPLOAD
+                    li
+                        a(href=routes.show_cody)    
+                            span
+                                i.fas.fa-tshirt
+                                |STYLE

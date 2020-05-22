@@ -2,48 +2,108 @@ mixin clothesEditBlock(clothes = {})
     .clothesBlock
         case clothes.category
             when 'outer'
-                .clothes_outer
-                    img.img(src=clothes.clothesFile height=100, weight=100)
-                    h4.img_color=clothes.color
-                    h4.img_category=clothes.category
-                    h4.img_category_detail=clothes.category_detail
-                    h4.img_season=clothes.season
+                .img_form
+                    .img_detail
+                        img.img_edit(src=clothes.clothesFile height=100, weight=100)
+                    .span_img_text
+                        .span_text_object
+                            span 색상
+                            span.img_color=clothes.color
+                        .span_text_object
+                            span 카테고리
+                            span.img_category=clothes.category
+                        .span_text_object
+                            span 상세카테고리
+                            span.img_category_detail=clothes.category_detail
+                        .span_text_object
+                            span 계절
+                            span.img_season=clothes.season
+                .button_form
                     button.delete_button()    
-                        a(href = routes.clothes_delete(clothes.id)) X                  
+                        a(href = routes.clothes_delete(clothes.id))
+                            i.far.fa-trash-alt                  
             when 'top'
-                .clothes_top
-                    img.img(src=clothes.clothesFile height=100, weight=100)
-                    h4.img_color=clothes.color
-                    h4.img_category=clothes.category
-                    h4.img_category_detail=clothes.category_detail
-                    h4.img_season=clothes.season
+                .img_form
+                    .img_detail
+                        img.img_edit(src=clothes.clothesFile height=100, weight=100)
+                    .span_img_text
+                        .span_text_object
+                            span 색상
+                            span.img_color=clothes.color
+                        .span_text_object
+                            span 카테고리
+                            span.img_category=clothes.category
+                        .span_text_object
+                            span 상세카테고리
+                            span.img_category_detail=clothes.category_detail
+                        .span_text_object
+                            span 계절
+                            span.img_season=clothes.season
+                .button_form
                     button.delete_button()    
-                        a(href = routes.clothes_delete(clothes.id)) X   
-            when 'bottom'
-                .clothes_bottom
-                    img.img(src=clothes.clothesFile height=100, weight=100)
-                    h4.img_color=clothes.color
-                    h4.img_category=clothes.category
-                    h4.img_category_detail=clothes.category_detail
-                    h4.img_season=clothes.season
+                        a(href = routes.clothes_delete(clothes.id))
+                            i.far.fa-trash-alt 
+            when 'bottom'                
+                .img_form
+                    .img_detail
+                        img.img_edit(src=clothes.clothesFile height=100, weight=100)
+                    .span_img_text
+                        .span_text_object
+                            span 색상
+                            span.img_color=clothes.color
+                        .span_text_object
+                            span 카테고리
+                            span.img_category=clothes.category
+                        .span_text_object
+                            span 상세카테고리
+                            span.img_category_detail=clothes.category_detail
+                        .span_text_object
+                            span 계절
+                            span.img_season=clothes.season
+                .button_form
                     button.delete_button()    
-                        a(href = routes.clothes_delete(clothes.id)) X   
+                        a(href = routes.clothes_delete(clothes.id))
+                            i.far.fa-trash-alt 
             when 'shoes'
-                .clothes_shoes
-                    img.img(src=clothes.clothesFile height=100, weight=100)
-                    h4.img_color=clothes.color
-                    h4.img_category=clothes.category
-                    h4.img_category_detail=clothes.category_detail
-                    h4.img_season=clothes.season
+                .img_form
+                    .img_detail
+                        img.img_edit(src=clothes.clothesFile height=100, weight=100)
+                    .span_img_text
+                        .span_text_object
+                            span 색상
+                            span.img_color=clothes.color
+                        .span_text_object
+                            span 카테고리
+                            span.img_category=clothes.category
+                        .span_text_object
+                            span 상세카테고리
+                            span.img_category_detail=clothes.category_detail
+                        .span_text_object
+                            span 계절
+                            span.img_season=clothes.season
+                .button_form
                     button.delete_button()    
-                        a(href = routes.clothes_delete(clothes.id)) X   
+                        a(href = routes.clothes_delete(clothes.id))
+                            i.far.fa-trash-alt    
             default
-                .clothes_etc
-                    img.img(src=clothes.clothesFile height=100, weight=100)
-                    h4.img_color=clothes.color
-                    h4.img_category=clothes.category
-                    h4.img_category_detail=clothes.category
-                    h4.img_season=clothes.season
+                .img_form
+                    .img_detail
+                        img.img_edit(src=clothes.clothesFile height=100, weight=100)
+                    .span_img_text
+                        .span_text_object
+                            span 색상
+                            span.img_color=clothes.color
+                        .span_text_object
+                            span 카테고리
+                            span.img_category=clothes.category
+                        .span_text_object
+                            span 상세카테고리
+                            span.img_category_detail=clothes.category_detail
+                        .span_text_object
+                            span 계절
+                            span.img_season=clothes.season
+                .button_form
                     button.delete_button()    
-                        a(href = routes.clothes_delete(clothes.id)) X   
+                        a(href = routes.clothes_delete(clothes.id))
+                            i.far.fa-trash-alt 
         

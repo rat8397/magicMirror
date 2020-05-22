@@ -2,7 +2,7 @@ extends ./layouts/main.pug
 block content 
     h1 정보를 변경하세요
     .form_container
-        form(action=routes.edit_profile(loggedUser.id), method="post",enctype = "multipart/form-data")
+        form.form(action=routes.edit_profile(loggedUser.id), method="post",enctype = "multipart/form-data")
            input(type="text",placeholder="name",name="name",value=loggedUser.name)
            input(type="email",placeholder="email",name="email",value=loggedUser.email)
            input(type="text",placeholder="address",name="address",value=loggedUser.address)

@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node init.js",
-    "tunnel": "lt --port 4000"
+    "start": "nodemon --exec babel-node init.js",
+    "tunnel": "lt --port 4000",
+    "stop": "taskkill -F -IM node.exe"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "@babel/preset-env": "^7.9.0",
     "@fortawesome/fontawesome-free": "^5.13.0",
     "body-parser": "^1.19.0",
+    "connect": "^3.7.0",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^3.2.0",
     "cookie-parser": "^1.4.5",

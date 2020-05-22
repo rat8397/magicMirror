@@ -1,10 +1,17 @@
 extends layouts/main.pug
 block content
     .user-profile
-        .user-profile-header
-            h4.profile_userName=`이름 : ${loggedUser.name}`
-            h4.profile_userEmail=`이메일 : ${loggedUser.email}`
-            h4.profile_userAddress=`주소 : ${loggedUser.address}`
+        .span_text
+            .span_text_object
+                span 이름
+                span.data=`${loggedUser.name}`
+            .span_text_object
+                span 이메일
+                span.data=`${loggedUser.email}`
+            .span_text_object
+                span 주소
+                span.data=`${loggedUser.address}`
+    .button_form    
         button.edit
             a(href=routes.edit_profile(loggedUser._id))
                 span 수정하기

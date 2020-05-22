@@ -11,9 +11,8 @@ block content
                 season:item.season,
                 clothesFile:item.fileUrl
             })
-    .form_container
-        form(action=routes.login, method="get")
-            button.edit
-                a(href=routes.upload(loggedUser._id)) 등록하기
-            button.edit
-                a(href=routes.edit(loggedUser._id)) 편집하기                    
+    .button_form
+        button.edit
+            a(href=routes.upload(loggedUser._id)) 등록하기
+        button.edit
+            a(href=routes.edit(loggedUser._id)) 편집하기                    

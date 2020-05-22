@@ -1,7 +1,7 @@
 extends layouts/main.pug
 block content
     .form_container
-        form(action=routes.upload_cody(loggedUser._id), method="post",enctype = "multipart/form-data")
+        form.upload_form(action=routes.upload_cody(loggedUser._id), method="post",enctype = "multipart/form-data")
             h3 outer
             .color
                 .color

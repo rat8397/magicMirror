@@ -1,0 +1,25 @@
+.span_text{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.span_text .span_text_object{
+    display:grid;
+    grid-template-columns:1fr 3fr;
+    width:100%;
+    max-width: 300px;
+    margin-bottom:10px;
+
+}
+
+.span_text span{
+    font-size :13px;
+    font-weight: bold;
+    
+    border : 1px solid rgba(0,0,0,0.24);
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12) 1px 2px rgba(0,0,0,0.24);
+    padding:8px;
+}

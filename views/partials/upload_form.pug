@@ -1,5 +1,5 @@
-.form_container
-        form(action=routes.upload(loggedUser._id), method="post",enctype = "multipart/form-data")
+.form_upload_container
+        form.upload_form(action=routes.upload(loggedUser._id), method="post",enctype = "multipart/form-data")
             .color
                 .color
                     input.color(type="radio" id="red" name="color" value="빨강")

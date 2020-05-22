@@ -5,49 +5,7 @@ block content
     .home_column
         if loggedUser
             span #{loggedUser.name}님 반갑습니다만..   
-        ul
-            if !loggedUser
-                li
-                    a(href=routes.login)
-                        span
-                            i.fas.fa-user-circle
-                            |Log in   
-                li
-                    a(href=routes.join)    
-                        span
-                            i.fas.fa-smoking
-                            |Join       
-                li
-                    a(href=routes.show_cody)    
-                        span
-                            i.fas.fa-smoking
-                            |CODY                           
-            else
-                li
-                    a(href=routes.cody_recommend(loggedUser.id))  
-                        span
-                        |RECOMMEND 
-                li
-                    a(href=routes.logout)  
-                        span
-                        |LOGOUT
-                li
-                    a(href=routes.me)  
-                        span
-                        |PROFILE
-                li
-                    a(href=routes.closet(loggedUser._id))  
-                        span
-                        |CLOSET
-                li
-                    a(href=routes.upload_cody(loggedUser._id))  
-                        span
-                        |UPLOAD CODY 
-                li
-                    a(href=routes.show_cody)    
-                        span
-                            i.fas.fa-smoking
-                            |CODY       
+               
                                        
 
         

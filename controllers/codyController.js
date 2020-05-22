@@ -49,25 +49,80 @@ export const post_cody_recommend = async(req,res)=>{
     }=req;
     try{
         const vetement = await Clothes.findById({_id:clothes});
-        var codies = await Cody.find({});
+       
         if(vetement.category === 'top'){
-            var codiesFilter =codies.filter((item,index)=>{
+            try{
+                const codiesFilter = await Cody.find({top_category_detail : vetement.category_detail});
+                try{
+                    const codiesRealFilter = await Cody.find({top_category_detail : vetement.category_detail,top_color:vetement.color});
+                    res.render("recommended",{pageTitle:"result of recommend",codiesFilter,codiesRealFilter})
+    
+                }catch(error){
+                    console.log(error);
+                    console.log("같은 카테고리, 같은 색상을 찾다가 에러")
+                }
+            }catch(error){
+                console.log(error);
+                console.log("같은 카테고리를 찾다가 에러")
+            }
+           
+            /*var codiesFilter =codies.filter((item,index)=>{
                 return vetement.category_detail === codies[index].top_category_detail
             })//cody데이터들 중 상의상세카테고리가 같은 경우만 배열에 남긴다.
             var codiesRealFilter = codiesFilter.filter((item,index)=>{
                 console.log(codies[index].top_color)
 
                 return vetement.color === codies[index].top_color;
-            })
-    
-            res.render("recommended",{pageTitle:"result of recommend",codiesFilter,codiesRealFilter})
+            })*/
+
     
     
         }else if(vetement.category === 'outer'){
+            try{
+                const codiesFilter = await Cody.find({outer_category_detail : vetement.category_detail});
+                try{
+                    const codiesRealFilter = await Cody.find({outer_category_detail : vetement.category_detail,outer_color:vetement.color});
+                    res.render("recommended",{pageTitle:"result of recommend",codiesFilter,codiesRealFilter})
     
+                }catch(error){
+                    console.log(error);
+                    console.log("같은 카테고리, 같은 색상을 찾다가 에러")
+                }
+            }catch(error){
+                console.log(error);
+                console.log("같은 카테고리를 찾다가 에러")
+            }
         }else if(vetement.category === 'bottom'){
+            try{
+                const codiesFilter = await Cody.find({bottom_category_detail : vetement.category_detail});
+                try{
+                    const codiesRealFilter = await Cody.find({bottom_category_detail : vetement.category_detail,bottom_color:vetement.color});
+                    res.render("recommended",{pageTitle:"result of recommend",codiesFilter,codiesRealFilter})
+    
+                }catch(error){
+                    console.log(error);
+                    console.log("같은 카테고리, 같은 색상을 찾다가 에러")
+                }
+            }catch(error){
+                console.log(error);
+                console.log("같은 카테고리를 찾다가 에러")
+            }
     
         }else if(vetement.category === 'shoes'){
+            try{
+                const codiesFilter = await Cody.find({shoes_category_detail : vetement.category_detail});
+                try{
+                    const codiesRealFilter = await Cody.find({shoes_category_detail : vetement.category_detail,shoes_color:vetement.color});
+                    res.render("recommended",{pageTitle:"result of recommend",codiesFilter,codiesRealFilter})
+    
+                }catch(error){
+                    console.log(error);
+                    console.log("같은 카테고리, 같은 색상을 찾다가 에러")
+                }
+            }catch(error){
+                console.log(error);
+                console.log("같은 카테고리를 찾다가 에러")
+            }
     
         }
     }catch(error){

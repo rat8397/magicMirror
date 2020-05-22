@@ -1,7 +1,7 @@
 extends layouts/main.pug
 block content
     .form_container
-        form(action=routes.upload(loggedUser._id), method="post",enctype = "multipart/form-data")
+        form.upload_form(action=routes.upload(loggedUser._id), method="post",enctype = "multipart/form-data")
             .color
                 .color
                     input.color(type="radio" id="gray" name="color" value="gray")

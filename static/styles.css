@@ -1,31 +1,28 @@
-a:link {
-  color: red;
-  text-decoration: none;
+a {
+  text-decoration: none !important;
 }
-a:visited {
-  color: black;
-  text-decoration: none;
+html,
+body {
+  min-height: 100%;
 }
-a:hover {
-  color: blue;
-  text-decoration: underline;
+html{
+  position: relative;
 }
-.clothesBlock{
-  border:1px solid black;
-  display:flex;
-  
+.clothesBlock {
+  border: 1px solid black;
+  display: flex;
 }
-.clothesBlock .clothes_outer{
+main{
+  margin-bottom: 100px;
 }
-.clothesBlock .clothes_top{
-  
+.clothesBlock .clothes_outer {
 }
-.clothesBlock .clothes_bottom{
-  
+.clothesBlock .clothes_top {
 }
-.clothesBlock .clothes_shoes{
-  
+.clothesBlock .clothes_bottom {
 }
-.color{
-  display:inline;
+.clothesBlock .clothes_shoes {
+}
+.color {
+  display: inline;
 }
