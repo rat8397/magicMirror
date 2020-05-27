@@ -1,14 +1,17 @@
 .footer{
-    background-color: black;
+    background-color: white;
     position: absolute;
 
     left: 0;
 
     bottom:0;
-    width: 100%;  
+    width: 100%;
+    border-top : 1px solid black  
+}
+.footer_wrapper .span_logo{
 }
 .footer_wrapper *{
-    color:white;
+    color:black;
 }
 .footer_wrapper{
     display:flex;
@@ -17,7 +20,7 @@
     justify-content: center;
 }
 .footer a{
-    color:white;
+    color:black;
 }
 .footer a:link {
     color: red;

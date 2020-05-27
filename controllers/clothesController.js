@@ -1,15 +1,12 @@
 import routes from "../routes";
 import Clothes from "../models/Clothes";
 
-export const myCloset = async (req, res) => {
-  try {
-    const clothes = await Clothes.find({ creatorID: req.user.id }).sort({
-      category: -1,
-    });
-    res.render("my_closet", { pageTitle: "mycloset", clothes });
+export const myCloset =  (req, res) => {
+  try {     
+    res.render("my_closet", { pageTitle: "mycloset" });
   } catch (error) {
     console.log(req);
-    res.render("my_closet", { pageTitle: "mycloset", clothes: [] });
+    res.render("my_closet", { pageTitle: "mycloset"});
   }
 };
 export const edit_closet = async (req, res) => {
@@ -140,3 +137,53 @@ export const postUpload = async (req, res) => {
   console.log(newClothes.fileUrl);
   res.redirect(routes.closet(req.user.id));
 };
+//좀더 효율적으로 바꿔보기
+export const getSummerCloset = async(req,res)=>{
+  const {
+    params:{id}
+  }=req;
+    try{
+      const clothes = await Clothes.find({creatorID:id,season:"summer"})
+      res.render("clothesShowing",{pageTitle:"summer",clothes})
+    }catch(error){
+      res.render("clothesShowing",{pageTitle:"summer",clothes:[]})
+
+    }
+}
+
+export const getWinterCloset = async(req,res)=>{
+  const {
+    params:{id}
+  }=req;
+  try{
+    const clothes = await Clothes.find({creatorID:id,season:"winter"})
+    res.render("clothesShowing",{pageTitle:"winter",clothes})
+  }catch(error){
+    res.render("clothesShowing",{pageTitle:"winter",clothes:[]})
+
+  }
+}
+export const getSpringfallCloset = async(req,res)=>{
+  const {
+    params:{id}
+  }=req;
+  try{
+    const clothes = await Clothes.find({creatorID:id,season:"spring-fall"})
+    res.render("clothesShowing",{pageTitle:"spring-fall",clothes})
+  }catch(error){
+    res.render("clothesShowing",{pageTitle:"spring-fall",clothes:[]})
+
+  }
+}
+export const getShoesCloset = async(req,res)=>{
+  const {
+    params:{id}
+  }=req;
+  try{
+    const clothes = await Clothes.find({creatorID:id,category:"shoes"})
+    res.render("clothesShowing",{pageTitle:"shoes",clothes})
+  }catch(error){
+    res.render("clothesShowing",{pageTitle:"shoes",clothes:[]})
+
+  }
+}

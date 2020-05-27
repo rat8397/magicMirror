@@ -1,0 +1,13 @@
+extends ./layouts/main.pug
+include mixins/clothesBlock
+block content
+    .showing_closet
+        each item in clothes
+            +clothesBlock({
+                id:item.id,
+                color:item.color,
+                category:item.category,
+                category_detail:item.category_detail,
+                season:item.season,
+                clothesFile:item.fileUrl
+            })

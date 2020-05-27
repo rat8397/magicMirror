@@ -1,6 +1,5 @@
 import express from "express"
 import { userDetail, change_password, get_edit_profile, post_edit_profile } from "../controllers/userController";
-import body_parser from "body-parser"
 
 import routes from "../routes";
 import { onlyPrivate, uploadClothes } from "../middleware/middlewares";

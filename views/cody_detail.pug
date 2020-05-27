@@ -19,8 +19,24 @@ block content
             .span_text_object
                 span 신발 
                 span.data  #{cody.shoes_color}  #{cody.shoes_category_detail}
-    .button_form
+    .button_form    
+        button.edit
+            if(prev_cody_id === null)
+                a
+                    i.fas.fa-arrow-left  
+            else
+                a(href=routes.cody_detail(prev_cody_id))
+                    i.fas.fa-arrow-left  
         button.edit
             a(href=routes.cody_edit(cody.id))|정보수정하기
         button.edit
-            a(href=routes.show_cody)|코디창으로   
+            a(href=routes.show_cody)|코디창으로
+        button.edit
+            a(href=cody.link)|무신사페이지로
+        button.edit
+            if(next_cody_id === null)
+                a
+                    i.fas.fa-arrow-right
+            else
+                a(href=routes.cody_detail(next_cody_id))
+                    i.fas.fa-arrow-right          

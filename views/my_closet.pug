@@ -1,17 +1,16 @@
 extends ./layouts/main.pug
 include mixins/clothesBlock
-block content
-    .showing_closet
-        each item in clothes
-            +clothesBlock({
-                id:item.id,
-                color:item.color,
-                category:item.category,
-                category_detail:item.category_detail,
-                season:item.season,
-                clothesFile:item.fileUrl
-            })
-    .button_form
+block content    
+    .myCloset
+        .summerClothes
+            a(href=routes.summer_closet(loggedUser._id))|여름
+        .winterClothes
+            a(href=routes.winter_closet(loggedUser._id))|겨울
+        .springFallClothes
+            a(href=routes.springfall_closet(loggedUser._id))|봄'가을
+        .shoes 
+            a(href=routes.shoes_closet(loggedUser._id))|신발
+    .button_form(id=ClosetButton)
         button.edit
             a(href=routes.upload(loggedUser._id)) 등록하기
         button.edit

@@ -90,6 +90,40 @@ const routes = {
             return CLOSET;
         }
     },
+    summer_closet : id=>{
+        
+        if(id){
+            return `/users/${id}/summercloset`
+        }else{
+            return `/users/:id/summercloset`;
+        }
+    },
+    
+    winter_closet : id=>{
+        
+        if(id){
+            return `/users/${id}/wintercloset`
+        }else{
+            return `/users/:id/wintercloset`;
+        }
+    },
+    
+    springfall_closet : id=>{
+        
+        if(id){
+            return `/users/${id}/springfallcloset`
+        }else{
+            return `/users/:id/springfallcloset`;
+        }
+    },    
+    shoes_closet : id=>{
+        
+        if(id){
+            return `/users/${id}/shoescloset`
+        }else{
+            return `/users/:id/shoescloset`;
+        }
+    },
     upload : id=>{
         if(id){
             return `/users/${id}/closet/upload`

@@ -28,8 +28,14 @@ const CodySchema = new mongoose.Schema({
   shoes_category_detail: {
     type: String,
   },
+  link:{
+    type: String,
+  },
   season:{
     type:String
+  },
+  count:{
+    type:Number
   }
 });
 const model = mongoose.model("Cody", CodySchema);
